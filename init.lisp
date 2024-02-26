@@ -10,7 +10,7 @@
 
 (add-hook (variable-value 'before-save-hook :global) 'delete-trailing-whitespace)
 
-(lem-sdl2:change-font
+(lem-sdl2/display:change-font (lem-sdl2/display:current-display)
  (lem-sdl2/font:make-font-config
   :size 18
   :latin-normal-file "/usr/share/fonts/TTF/Inconsolata-Regular.ttf"
