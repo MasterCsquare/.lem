@@ -1,6 +1,6 @@
 (in-package :lem-user)
 
-(load-theme "modus-vivendi")
+(load-theme "lem-default")
 
 (asdf:load-system :lem-pareto)
 (add-hook lem-lisp-mode:*lisp-mode-hook* 'lem-paredit-mode:paredit-mode)
