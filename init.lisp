@@ -1,6 +1,6 @@
 (in-package :lem-user)
 
-(load-theme "onedark")
+(load-theme "modus-vivendi")
 
 (asdf:load-system :lem-pareto)
 (add-hook lem-lisp-mode:*lisp-mode-hook* 'lem-paredit-mode:paredit-mode)
@@ -10,10 +10,10 @@
 
 (add-hook (variable-value 'before-save-hook :global) 'delete-trailing-whitespace)
 
-(lem-sdl2/display:change-font (lem-sdl2/display:current-display)
- (lem-sdl2/font:make-font-config
-  :size 18
-  :latin-normal-file "/usr/share/fonts/TTF/Inconsolata-Regular.ttf"
-  :latin-bold-file "/usr/share/fonts/TTF/Inconsolata-Bold.ttf"
-  :cjk-normal-file "/usr/share/fonts/wenquanyi/wqy-zenhei/wqy-zenhei.ttc"
-  :cjk-bold-file "/usr/share/fonts/wenquanyi/wqy-zenhei/wqy-zenhei.ttc"))
+;; (lem-sdl2/display:change-font (lem-sdl2/display:current-display)
+;;  (lem-sdl2/font:make-font-config
+;;   :size 18
+;;   :latin-normal-file "/usr/share/fonts/TTF/Inconsolata-Regular.ttf"
+;;   :latin-bold-file "/usr/share/fonts/TTF/Inconsolata-Bold.ttf"
+;;   :cjk-normal-file "/usr/share/fonts/wenquanyi/wqy-zenhei/wqy-zenhei.ttc"
+;;   :cjk-bold-file "/usr/share/fonts/wenquanyi/wqy-zenhei/wqy-zenhei.ttc"))
