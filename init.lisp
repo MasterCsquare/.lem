@@ -1,6 +1,7 @@
 (in-package :lem-user)
 
 (load-theme "lem-default")
+(set-font :name "Inconsolata" :size 19)
 
 (asdf:load-system :lem-pareto)
 (add-hook lem-lisp-mode:*lisp-mode-hook* 'lem-paredit-mode:paredit-mode)
