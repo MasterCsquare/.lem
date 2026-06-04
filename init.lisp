@@ -2,7 +2,9 @@
 
 (load-theme "lem-default")
 (set-font :name "Inconsolata" :size 19)
+(setf lem/tabbar:*enable-tabbar-on-startup* nil)
 
+(push "~/common-lisp/lem-pareto/" asdf:*central-registry*)
 (asdf:load-system :lem-pareto)
 (add-hook lem-lisp-mode:*lisp-mode-hook* 'lem-paredit-mode:paredit-mode)
 (add-hook lem-lisp-mode:*lisp-mode-hook* 'lem-pareto-mode:pareto-mode)
