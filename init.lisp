@@ -1,6 +1,6 @@
 (in-package :lem-user)
 
-(load-theme "lem-default")
+(load-theme "ayu-dark")
 (set-font :name "Inconsolata" :size 19)
 (setf lem/tabbar:*enable-tabbar-on-startup* nil)
 
