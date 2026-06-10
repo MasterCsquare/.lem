@@ -21,6 +21,8 @@
           (lambda ()
             (lem/completion-mode:completion-end)))
 
+(setf (variable-value 'lem-lisp-mode/paren-coloring:paren-coloring :global) t)
+
 (defvar *menu-keymap*
   (make-keymap)
   "Keymap for menu key.")
