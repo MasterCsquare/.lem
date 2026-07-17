@@ -1,8 +1,10 @@
 (in-package :lem-user)
 
 (load-theme "ayu-dark")
-(set-font :name "Inconsolata" :size 19)
+(set-font :name "Inconsolata" :size 18)
 (setf lem/tabbar:*enable-tabbar-on-startup* nil)
+
+(setf lem:*auto-format* t)
 
 (push "~/common-lisp/lem-pareto/" asdf:*central-registry*)
 (asdf:load-system :lem-pareto)
@@ -46,3 +48,11 @@
   ("ContextMenu" 'execute-command))
 
 (define-key *global-keymap* "ContextMenu" *menu-keymap*)
+
+(lem-lsp-mode:define-language-spec (go-spec lem-go-mode:go-mode)
+  :language-id "go"
+  :root-uri-patterns '("go.mod")
+  :command '("gopls")
+  :install-command "go install golang.org/x/tools/gopls@latest"
+  :readme-url "https://github.com/golang/tools/tree/master/gopls"
+  :connection-mode :stdio)
