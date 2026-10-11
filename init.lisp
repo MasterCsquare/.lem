@@ -3,6 +3,7 @@
 (load-theme "ayu-dark")
 (set-font :name "Inconsolata" :size 18)
 (setf lem/tabbar:*enable-tabbar-on-startup* nil)
+(lem-winner-mode:winner-mode)
 
 (setf lem:*auto-format* t)
 
@@ -45,7 +46,9 @@
   ("3" 'split-active-window-horizontally)
   ("d" 'lem/filer:filer)
   ("Space" 'lem/legit:legit-status)
-  ("ContextMenu" 'execute-command))
+  ("ContextMenu" 'execute-command)
+  ("[" 'lem-winner-mode:winner-undo)
+  ("]" 'lem-winner-mode:winner-redo))
 
 (define-key *global-keymap* "ContextMenu" *menu-keymap*)
 
