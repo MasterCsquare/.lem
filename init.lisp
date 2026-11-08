@@ -26,6 +26,11 @@
 
 (setf (variable-value 'lem-lisp-mode/paren-coloring:paren-coloring :global) t)
 
+(add-hook lem-markdown-mode:*markdown-mode-hook*
+          (lambda () (lem-spell-check:spell-check-mode t)))
+
+(setf lem-trans:*trans-target-language* "zh")
+
 (defvar *menu-keymap*
   (make-keymap)
   "Keymap for menu key.")
@@ -48,7 +53,8 @@
   ("Space" 'lem/legit:legit-status)
   ("ContextMenu" 'execute-command)
   ("[" 'lem-winner-mode:winner-undo)
-  ("]" 'lem-winner-mode:winner-redo))
+  ("]" 'lem-winner-mode:winner-redo)
+  ("s" 'lem-spell-check:spell-check-word))
 
 (define-key *global-keymap* "ContextMenu" *menu-keymap*)
 
