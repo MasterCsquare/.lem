@@ -1,16 +1,15 @@
 (in-package :lem-user)
 
 (load-theme "ayu-dark")
-(set-font :name "Inconsolata" :size 18)
+(set-font :name "Inconsolata" :size 16)
 (setf lem/tabbar:*enable-tabbar-on-startup* nil)
 (lem-winner-mode:winner-mode)
 
 (setf lem:*auto-format* t)
 
 (push "~/common-lisp/lem-pareto/" asdf:*central-registry*)
-
-
 (asdf:load-system :lem-pareto)
+
 (push "~/common-lisp/organ-mode/" asdf:*central-registry*)
 (asdf:load-system :organ-mode)
 
