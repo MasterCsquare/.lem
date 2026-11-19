@@ -8,7 +8,12 @@
 (setf lem:*auto-format* t)
 
 (push "~/common-lisp/lem-pareto/" asdf:*central-registry*)
+
+
 (asdf:load-system :lem-pareto)
+(push "~/common-lisp/organ-mode/" asdf:*central-registry*)
+(asdf:load-system :organ-mode)
+
 (add-hook lem-lisp-mode:*lisp-mode-hook* 'lem-paredit-mode:paredit-mode)
 (add-hook lem-lisp-mode:*lisp-mode-hook* 'lem-pareto-mode:pareto-mode)
 
