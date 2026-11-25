@@ -58,7 +58,10 @@
   ("ContextMenu" 'execute-command)
   ("[" 'lem-winner-mode:winner-undo)
   ("]" 'lem-winner-mode:winner-redo)
-  ("s" 'lem-spell-check:spell-check-word))
+  ("s" 'lem-spell-check:spell-check-word)
+  ("x" 'lem/frame-multiplexer:frame-multiplexer-create-with-new-buffer-list )
+  ("c" 'lem/frame-multiplexer:frame-multiplexer-prev)
+  ("v" 'lem/frame-multiplexer:frame-multiplexer-next))
 
 (define-key *global-keymap* "ContextMenu" *menu-keymap*)
 
@@ -69,3 +72,8 @@
   :install-command "go install golang.org/x/tools/gopls@latest"
   :readme-url "https://github.com/golang/tools/tree/master/gopls"
   :connection-mode :stdio)
+
+;; (lem-lsp-mode:define-language-spec (c-spec lem-c-mode:c-mode)
+;; :language-id "c"
+;; :command '("ccls")
+;; :connection-mode :stdio)
